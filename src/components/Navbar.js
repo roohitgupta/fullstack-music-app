@@ -27,6 +27,14 @@ const Navbar = () => {
   </div>
 </nav>
 
+<footer>
+<div className="footer-copyright text-center py-3">For DeltaX by
+    <a href="https://www.linkedin.com/in/roohit-gupta/"> Rohit Gupta</a>
+  </div>
+ 
+
+</footer>
+
     </div>
   )
 }
