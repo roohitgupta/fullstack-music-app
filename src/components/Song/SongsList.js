@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+
 
 const SongsList = () => {
+  const navigate = useNavigate();
   const [songData, setSongData] = useState([]);
   const [artistData, setArtistData] = useState([]);
 
@@ -32,7 +36,10 @@ const SongsList = () => {
   }, []);
 
   return (
-    <div className="song-container">
+    <div className="container">
+      <div className="d-flex align-items-end flex-column">
+      <button onClick={()=> navigate("/add")} className="btn btn-info m-3 btn-lg">Add Song / Artist</button>
+      </div>
       <table className="table">
         <thead>
           <tr>

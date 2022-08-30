@@ -1,6 +1,10 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  
+  const navigate = useNavigate();
+  
   return (
     <div>
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -11,29 +15,22 @@ const Navbar = () => {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="#">Home</a>
+        <button className="btn" onClick={()=> navigate("/")} >Home</button>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Link</a>
-      </li>
-     
-      <li className="nav-item">
-        <a className="nav-link disabled" href="#">Disabled</a>
+        <button className="btn" onClick={()=> navigate("/add")} >Add Song / Artist</button>
       </li>
     </ul>
-    <form className="form-inline my-2 my-lg-0">
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
-<footer>
+{/* <footer>
 <div className="footer-copyright text-center py-3">For DeltaX by
     <a href="https://www.linkedin.com/in/roohit-gupta/"> Rohit Gupta</a>
   </div>
  
 
-</footer>
+</footer> */}
 
     </div>
   )
