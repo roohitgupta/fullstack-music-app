@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Artist.css";
 
 const ArtistForm = () => {
   const [artistName, setArtistName] = useState("");
@@ -26,33 +25,42 @@ const ArtistForm = () => {
 
   return (
     <div className='container'>
-			
-			<form className='form' onSubmit={artistForm}>
-        <h5>Artist Name</h5>
+      <div className="card">
+			<form className='form-group p-4' onSubmit={artistForm}>
+        <div className="pb-2">
+          <label>Artist Name</label>
 				<input
 					value={artistName}
 					onChange={(e) => setArtistName(e.target.value)}
 					type="text"
+          className="form-control"
 					placeholder="Artist Name"
-				/>
-				<br />
-        <h5>Date of Birth</h5>
+				/></div>
+        <div className="pb-2">
+          <label>Date of Birth</label>
 				<input
 					value={dob}
 					onChange={(e) => setDob(e.target.value)}
 					type="text"
+          className="form-control"
 					placeholder="Date of Birth"
 				/>
-				<br />
-        <h5>Boi</h5>
+        </div>
+        <div className="pb-2">
+          <label>Bio</label>
         <input 
           type="text"
           value={bio} 
           placeholder="Boi"
+          className="form-control"
           onChange={(e)=> setBio(e.target.value)}
         />
-				<input className='submitBtn' type="submit" value="Submit" />
+      </div>
+        <div className="py-2">
+				<input className='submitBtn form-control' type="submit" value="Submit" />
+      </div>
 			</form>
+      </div>
 		</div>
   );
 };
